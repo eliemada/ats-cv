@@ -27,7 +27,7 @@
 \usepackage{graphicx}
 \usepackage{cfr-lm}
 \usepackage[T1]{fontenc}
-\setlength{\multicolsep}{0pt} 
+\setlength{\multicolsep}{0pt}
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
@@ -40,18 +40,18 @@
 %\addtolength{\textwidth}{1in}
 \usepackage[most]{tcolorbox}
 \tcbset{
-	frame code={}
-	center title,
-	left=0pt,
-	right=0pt,
-	top=0pt,
-	bottom=0pt,
-	colback=gray!20,
-	colframe=white,
-	width=\dimexpr\textwidth\relax,
-	enlarge left by=-2mm,
-	boxsep=4pt,
-	arc=0pt,outer arc=0pt,
+  frame code={}
+  center title,
+  left=0pt,
+  right=0pt,
+  top=0pt,
+  bottom=0pt,
+  colback=gray!20,
+  colframe=white,
+  width=\dimexpr\textwidth\relax,
+  enlarge left by=-2mm,
+  boxsep=4pt,
+  arc=0pt,outer arc=0pt,
 }
 
 \urlstyle{same}
@@ -67,52 +67,64 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
-  \item{
+\item{
     \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
   }
 }
 
 \newcommand{\resumePOR}[3]{
-\vspace{0.5mm}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
-    \end{tabular*}
-    \vspace{-2mm}
+  \vspace{0.5mm}
+\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}}
+  \end{tabular*}
+  \vspace{-2mm}
 }
 
 \newcommand{\resumeSubheading}[4]{
-\vspace{0.5mm}\item
-    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & \textit{\footnotesize{#4}} \\
-        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
-    \end{tabular*}
-    \vspace{-2.4mm}
+  \vspace{0.5mm}
+\item
+  \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\footnotesize{#4}} \\
+    \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+  \end{tabular*}
+  \vspace{-2.4mm}
 }
 
 \newcommand{\resumeProject}[4]{
-\vspace{0.5mm}\item
-    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & \textit{\footnotesize{#3}} \\
-        \footnotesize{\textit{#2}} & \footnotesize{#4}
-    \end{tabular*}
-    \vspace{-2.4mm}
+  \vspace{0.5mm}
+\item
+  \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\footnotesize{#3}} \\
+    \footnotesize{\textit{#2}} & \footnotesize{#4}
+  \end{tabular*}
+  \vspace{-2.4mm}
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 % \renewcommand{\labelitemii}{$\circ$}
 \renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
-\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
-\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
-\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\resumeSubHeadingListStart}{
+\begin{itemize}[leftmargin=*,labelsep=0mm]}
+    \newcommand{\resumeHeadingSkillStart}{
+    \begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+        \newcommand{\resumeItemListStart}{
+          \begin{justify}
+            \begin{itemize}[leftmargin=3ex, rightmargin=2ex,
+              noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+              \newcommand{\resumeSubHeadingListEnd}{
+          \end{itemize}\vspace{2mm}}
+          \newcommand{\resumeHeadingSkillEnd}{
+      \end{itemize}\vspace{-2mm}}
+      \newcommand{\resumeItemListEnd}{
+    \end{itemize}
+\end{justify}\vspace{-2mm}}
 \newcommand{\cvsection}[1]{%
-\vspace{2mm}
-\begin{tcolorbox}
+  \vspace{2mm}
+  \begin{tcolorbox}
     \textbf{\large #1}
-\end{tcolorbox}
-    \vspace{-4mm}
+  \end{tcolorbox}
+  \vspace{-4mm}
 }
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}%
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
@@ -129,95 +141,114 @@
 \newcommand{\emaila}{elie.bruno@epfl.ch} %Email 1
 % \input{glyphtounicode}
 
-% \pdfgentounicode=1 
+% \pdfgentounicode=1
 \begin{document}
 
 \fontfamily{cmr}\selectfont
 %----------HEADING-----------------
 
 {
-\begin{tabularx}{\linewidth}{L r} \\
-  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ \phone}\\
- & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
-  Bachelor of Computer Science & \href{https://github.com/eliemada}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {eliemada}} \\  
-  {Swiss Federal Institute of Technology (EPFL), Lausanne} & \href{www.linkedin.com/in/elie-bruno/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {elie-bruno}}
-\end{tabularx}
+  \begin{tabularx}{\linewidth}{L r} \\
+    \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize
+    \faPhone}\ \phone}\\
+    & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize
+    \faEnvelope}\ {\emaila}} \\
+    Bachelor of Computer Science &
+    \href{https://github.com/eliemada}{\raisebox{0.0\height}{\footnotesize
+    \faGithub}\ {eliemada}} \\
+    {Swiss Federal Institute of Technology (EPFL), Lausanne} &
+    \href{www.linkedin.com/in/elie-bruno/}{\raisebox{0.0\height}{\footnotesize
+    \faLinkedin}\ {elie-bruno}}
+  \end{tabularx}
 }
-
-
-
 
 %-----------EXPERIENCE-----------------
 \section{\textbf{Experience}}
-  \resumeSubHeadingListStart
-  \vspace{-2.0mm}
+\resumeSubHeadingListStart
+\vspace{-2.0mm}
 \resumeSubheading
-  {Quantitative Analyst Intern}{}
-  {Qube Research \& Technologies (QRT)}{Feb 2025 – Aug 2025}
-  \vspace{-2mm}
-  \resumeItemListStart
-    \item Developed \textbf{scalable data pipelines} to process financial datasets (e.g., Markit, Euronext), enabling real-time quantitative research.
-    \item Built a migration framework to transition legacy data sources to a modern, \textbf{Argo Workflows-based} architecture using cron jobs and S3 trigger events for automated ETL of CSV/PSV/TSV files, API queries, and database dumps.
-   \item Designed internal APIs and runbook automation tools to \textbf{streamline workflows} for researchers and data engineers.
-    \item Leveraged \textbf{Python, PyArrow, Polars, and Parquet} for in-memory analytics; executed advanced SQL on \textbf{PostgreSQL} and columnar stores for high-throughput queries.
-    \item Ensured high code quality and consistency using Pants for builds, `uv` for dependency management, Ruff for linting, and `ty` (\textbf{Astral}) for type-safe CLI interfaces.
-    \item Monitored and debugged data workflows using \textbf{AWS CloudWatch} and logging best practices.
-  \resumeItemListEnd
+{Quantitative Analyst Intern}{}
+{Qube Research \& Technologies (QRT)}{Feb 2025 – Aug 2025}
+\vspace{-2mm}
+\resumeItemListStart
+\item Developed \textbf{scalable data pipelines} to process financial
+datasets (e.g., Markit, Euronext), enabling real-time quantitative research.
+\item Built a migration framework to transition legacy data sources
+to a modern, \textbf{Argo Workflows-based} architecture using cron
+jobs and S3 trigger events for automated ETL of CSV/PSV/TSV files,
+API queries, and database dumps.
+\item Designed internal APIs and runbook automation tools to
+\textbf{streamline workflows} for researchers and data engineers.
+\item Leveraged \textbf{Python, PyArrow, Polars, and Parquet} for
+in-memory analytics; executed advanced SQL on \textbf{PostgreSQL} and
+columnar stores for high-throughput queries.
+\item Ensured high code quality and consistency using Pants for
+builds, `uv` for dependency management, Ruff for linting, and `ty`
+(\textbf{Astral}) for type-safe CLI interfaces.
+\item Monitored and debugged data workflows using \textbf{AWS
+CloudWatch} and logging best practices.
+\resumeItemListEnd
 \vspace{-3.0mm}
 
 \resumeSubheading
-  {Associate Backend Engineer}{}
-  {Proton}{Aug 2024 – Nov 2024}
-  \vspace{-2mm}
-  \resumeItemListStart
-    \item Refactored legacy monolith codebase into modular components to \textbf{enhance maintainability and scalability}.
-    \item Improved system architecture through file reorganization and added comprehensive tests to ensure robustness.
-  \resumeItemListEnd
+{Associate Backend Engineer}{}
+{Proton}{Aug 2024 – Nov 2024}
+\vspace{-2mm}
+\resumeItemListStart
+\item Refactored legacy monolith codebase into modular components to
+\textbf{enhance maintainability and scalability}.
+\item Improved system architecture through file reorganization and
+added comprehensive tests to ensure robustness.
+\resumeItemListEnd
 
 \vspace{-3.0mm}
 \resumeSubheading
-  {Teaching Assistant}{}
-  {EPFL - CS-119(a) and CSS-119(k)}{Feb 2024 - Ongoing}
+{Teaching Assistant}{}
+{EPFL - CS-119(a) and CSS-119(k)}{Feb 2024 - Ongoing}
 \vspace{-2.0mm}
 
-  \resumeItemListStart
-    \item Taught fundamentals of C and Python; guided students through exercises and assignments.
-    \item Built a notification bot to track and push EDStem student questions in real time.
-  \resumeItemListEnd
-    
-    \vspace{-2.0mm}
-    
-    % \resumeSubheading
-    %   {EPFL Hackathon -- Tesla Stock Volatility Prediction}{}
-    %   {Optiver}{December 2023}
-    %   \vspace{-2.0mm}
-    %   \resumeItemListStart
-    %   \item Developed a model to analyze and predict stock market trends, specifically for Tesla.
-    %   \item Collaborated in a team environment to combine diverse skills in data analysis, programming, and financial knowledge.
-    %   \item Placed 7th out of 90, demonstrating strong analytical and predictive abilities in a competitive setting.
-    % \resumeItemListEnd
-    
-    \vspace{-3.0mm}
-      
-  \resumeSubHeadingListEnd
+\resumeItemListStart
+\item Taught fundamentals of C and Python; guided students through
+exercises and assignments.
+\item Built a notification bot to track and push EDStem student
+questions in real time.
+\resumeItemListEnd
+
+\vspace{-2.0mm}
+
+% \resumeSubheading
+%   {EPFL Hackathon -- Tesla Stock Volatility Prediction}{}
+%   {Optiver}{December 2023}
+%   \vspace{-2.0mm}
+%   \resumeItemListStart
+%   \item Developed a model to analyze and predict stock market
+% trends, specifically for Tesla.
+%   \item Collaborated in a team environment to combine diverse
+% skills in data analysis, programming, and financial knowledge.
+%   \item Placed 7th out of 90, demonstrating strong analytical and
+% predictive abilities in a competitive setting.
+% \resumeItemListEnd
+
+\vspace{-3.0mm}
+
+\resumeSubHeadingListEnd
 \vspace{-5.5mm}
 
 %-----------EDUCATION-----------
 \section{\textbf{Education}}
-  \resumeSubHeadingListStart
-      \resumeSubheading
-      {Master of Computer Science}{}
-      {Swiss Federal Institute of Technology (EPFL), Lausanne}{2025-2027}
-            \resumeSubheading
-      {Master Computer Science and Engineering}{}
-      {Instituto Superior Técnico (IST), Lisbon}{2024-2025}
-    \resumeSubheading
-      {Bachelor of Computer Science}{}
-      {Swiss Federal Institute of Technology (EPFL), Lausanne}{2022-2025}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Master of Computer Science}{}
+{Swiss Federal Institute of Technology (EPFL), Lausanne}{2025-2027}
+\resumeSubheading
+{Master Computer Science and Engineering}{}
+{Instituto Superior Técnico (IST), Lisbon}{2024-2025}
+\resumeSubheading
+{Bachelor of Computer Science}{}
+{Swiss Federal Institute of Technology (EPFL), Lausanne}{2022-2025}
 
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 \vspace{-5.5mm}
-
 
 %
 %-----------PROJECTS-----------------
@@ -225,74 +256,90 @@
 \resumeSubHeadingListStart
 % \resumeProject
 % {ML For Trading} %Project Name
-% {Used RNN and CNN with market data to generate synthetic data}{Long-short strategy with unsupervised / supervised learning} %Project Name, Location Name
+% {Used RNN and CNN with market data to generate synthetic
+% data}{Long-short strategy with unsupervised / supervised learning}
+% %Project Name, Location Name
 % {August 2024 - Ongoing} %Event Dates
 
 % \resumeItemListStart
-%   \item {Developed dynamic Flight Tracker Java application as a part of second-semester coursework, enabling real-time flight tracking worldwide with up-to-date information on status, delays, and cancellations.}
-%   \item {Demonstrated proficiency in Object-Oriented Programming, utilizing Java concepts like inheritance and encapsulation, while adhering to the principles of Object-Oriented Programming.}
+%   \item {Developed dynamic Flight Tracker Java application as a
+% part of second-semester coursework, enabling real-time flight
+% tracking worldwide with up-to-date information on status, delays,
+% and cancellations.}
+%   \item {Demonstrated proficiency in Object-Oriented Programming,
+% utilizing Java concepts like inheritance and encapsulation, while
+% adhering to the principles of Object-Oriented Programming.}
 % \resumeItemListEnd
 % \vspace{-2mm}
-    \resumeProject
-      {Plane Tracker - ADSB Demodulator / JavaFX} %Project Name
-      {A Plane Tracker application similar to FlightRadar24} %Project Name, Location Name
-      {14 weeks} %Event Dates
+\resumeProject
+{Plane Tracker - ADSB Demodulator / JavaFX} %Project Name
+{A Plane Tracker application similar to FlightRadar24} %Project Name,
+% Location Name
+{14 weeks} %Event Dates
 
-      \resumeItemListStart
-        \item {Developed dynamic Flight Tracker Java application enabling \textbf{real-time flight tracking} worldwide with up-to-date information on status, delays, and cancellations.}
-        \item {Demonstrated proficiency in Object-Oriented Programming, utilizing Java concepts like \textbf{inheritance and encapsulation}, while adhering to the principles of Object-Oriented Programming.}
-    \resumeItemListEnd
-    \vspace{-2mm}
-    
-    % \resumeProject
-    %   {ICRogue Game} %Project Name
-    %   {A java based game, using a game engine}
-    %   {6 weeks} %Event Dates
+\resumeItemListStart
+\item {Developed dynamic Flight Tracker Java application enabling
+  \textbf{real-time flight tracking} worldwide with up-to-date
+information on status, delays, and cancellations.}
+\item {Demonstrated proficiency in Object-Oriented Programming,
+  utilizing Java concepts like \textbf{inheritance and encapsulation},
+while adhering to the principles of Object-Oriented Programming.}
+\resumeItemListEnd
+\vspace{-2mm}
 
-    %   \resumeItemListStart
-    %     \item {Role Play game (RPG) is a game in which players take on the role of a character and face off against enemies.}
-    %     \item {This RPG implements a Random Generation algorithm, which means that the game creates different maps for each playthrough, adding a level of unpredictability and variety to the gameplay.}
-    % \resumeItemListEnd
-    % \vspace{-2mm}
+% \resumeProject
+%   {ICRogue Game} %Project Name
+%   {A java based game, using a game engine}
+%   {6 weeks} %Event Dates
+
+%   \resumeItemListStart
+%     \item {Role Play game (RPG) is a game in which players take on
+% the role of a character and face off against enemies.}
+%     \item {This RPG implements a Random Generation algorithm, which
+% means that the game creates different maps for each playthrough,
+% adding a level of unpredictability and variety to the gameplay.}
+% \resumeItemListEnd
+% \vspace{-2mm}
 
 %     \resumeProject
 %       {Covid-19 Tracker} %Project Name
-%       {Daily and weekly updated statistics tracking the number of COVID-19 cases, recovered, and deaths.} %Project Name, Location Name
+%       {Daily and weekly updated statistics tracking the number of
+% COVID-19 cases, recovered, and deaths.} %Project Name, Location Name
 %       {} %Event Dates
 
 %       \resumeItemListStart
-%         \item {Tracking world-wide cases using google maps and live API stats and datasets.}
+%         \item {Tracking world-wide cases using google maps and live
+% API stats and datasets.}
 %         \item {Technology Used : JavaScript , CSS, HTML, API.
 % }
 %     \resumeItemListEnd
-      
-  \resumeSubHeadingListEnd
+
+\resumeSubHeadingListEnd
 \vspace{-7.5mm}
-
-
-
-
-
-
 
 %-----------Technical skills-----------------
 \section{\textbf{Technical Skills}}
- \begin{itemize}[leftmargin=0.05in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Python,C, Java, Javascript, HTML+CSS, Assembly, TypeScript, SQL  } \\
-     \textbf{Libraries }{: PyArrow, Polars, Pandas, Astral Suite, ReactJs }\\ 
-     \textbf{Web Dev Tools}{: Jetbrains Suite, VScode, Git, Github } \\ 
-     \textbf{Frameworks}{: ReactJs } \\
-    %  \textbf{Cloud/Databases}{:MongoDb, Firebase, Relational Database(mySql) } \\  
-    
-     \textbf{Relevent Coursework}{: Data Structures \& Algorithms, Operating Systems, Object Oriented Programming, Software Engineering, Computer Networks, Machine Learning } \\ 
-     \textbf{Areas of Interest}{: Big Data, Data Science, Machine Learning, Low-level Programming} \\
-     \textbf{Soft Skills}{: Problem Solving, Self-learning, Presentation, Adaptability, Team Leading} \\
+\begin{itemize}[leftmargin=0.05in, label={}]
+    \small{
+    \item{
+        \textbf{Languages}{: Python,C, Java, Javascript, HTML+CSS,
+        Assembly, TypeScript, SQL  } \\
+        \textbf{Libraries }{: PyArrow, Polars, Pandas, Astral Suite, ReactJs }\\
+        \textbf{Web Dev Tools}{: Jetbrains Suite, VScode, Git, Github } \\
+        \textbf{Frameworks}{: ReactJs } \\
+        %  \textbf{Cloud/Databases}{:MongoDb, Firebase, Relational
+        % Database(mySql) } \\
+
+        \textbf{Relevent Coursework}{: Data Structures \& Algorithms,
+          Operating Systems, Object Oriented Programming, Software
+        Engineering, Computer Networks, Machine Learning } \\
+        \textbf{Areas of Interest}{: Big Data, Data Science, Machine
+        Learning, Low-level Programming} \\
+        \textbf{Soft Skills}{: Problem Solving, Self-learning,
+        Presentation, Adaptability, Team Leading} \\
     }}
- \end{itemize}
- \vspace{-16pt}
-
-
+\end{itemize}
+\vspace{-16pt}
 
 %-----------Positions of Responsibility-----------------
 %-----------Interests & Achievements-----------------
@@ -301,24 +348,27 @@
 \resumeSubHeadingListStart
 
 \resumePOR{Hackathons}
-    {Optiver, Vitol, Lauzhack ... – Lausanne}
-    {}
-    \resumeItemListStart
-      \item Finished 3rd out of 90 in Optiver EPFL Hackathon 2023, developing a model to analyze and predict stock market trends for Tesla.
-      \item Won Entrepreneur First hackathon in Milan where we developped a AI agent to make bookings and reservations.
-    \resumeItemListEnd
+{Optiver, Vitol, Lauzhack ... – Lausanne}
+{}
+\resumeItemListStart
+\item Finished 3rd out of 90 in Optiver EPFL Hackathon 2023,
+developing a model to analyze and predict stock market trends for Tesla.
+\item Won Entrepreneur First hackathon in Milan where we developped a
+AI agent to make bookings and reservations.
+\resumeItemListEnd
 \vspace{-4mm}
 \resumePOR{Photography Awards}
-    {}{}
-    \resumeItemListStart
-      \item \textbf{Winner} of RESCO 2023 EPFL photo contest.
-      \item \textbf{Winner} of the EPFL Study Abroad 2025 photo contest (Landscape category).
-      \item Portfolio available at: \href{https://photos.eliebruno.com}{\texttt{photos.eliebruno.com}}.
-    \resumeItemListEnd
+{}{}
+\resumeItemListStart
+\item \textbf{Winner} of RESCO 2023 EPFL photo contest.
+\item \textbf{Winner} of the EPFL Study Abroad 2025 photo contest
+(Landscape category).
+\item Portfolio available at:
+\href{https://photos.eliebruno.com}{\texttt{photos.eliebruno.com}}.
+\resumeItemListEnd
 
 \resumeSubHeadingListEnd
 \vspace{-5mm}
-
 
 % %-----------Achievements-----------------
 % \section{\textbf{Achievements}}
@@ -327,14 +377,12 @@
 % \resumePOR{Achievement } % Award
 %     {description} % Event
 %     {Event dates} %Event Year
-    
+
 % \resumePOR{Achievement } % Award
 %     {description} % Event
 %     {Event dates} %Event Year
 % \resumeSubHeadingListEnd
 % \vspace{-5mm}
-
-
 
 %-------------------------------------------
 \end{document}
