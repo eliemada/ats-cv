@@ -37,10 +37,40 @@ jobs:
           LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
           echo "Latest tag: $LATEST_TAG"
 
-          # Extract version number and increment
-          VERSION_NUMBER=$(echo $LATEST_TAG | sed 's/v//' | awk -F. '{print $1"."$2"."$3+1}')
-          NEW_TAG="v$VERSION_NUMBER"
+          # Get the latest commit message
+          COMMIT_MSG=$(git log -1 --pretty=%B)
+          echo "Commit message: $COMMIT_MSG"
 
+          # Extract current version numbers
+          CURRENT_VERSION=$(echo $LATEST_TAG | sed 's/v//')
+          MAJOR=$(echo $CURRENT_VERSION | cut -d. -f1)
+          MINOR=$(echo $CURRENT_VERSION | cut -d. -f2)
+          PATCH=$(echo $CURRENT_VERSION | cut -d. -f3)
+
+          # Check for version bump indicators (text-based gitmoji)
+          if echo "$COMMIT_MSG" | grep -E "(:boom:|:fire:|BREAKING)" > /dev/null; then
+            # Major version bump
+            MAJOR=$((MAJOR + 1))
+            MINOR=0
+            PATCH=0
+            BUMP_TYPE="major"
+          elif echo "$COMMIT_MSG" | grep -E "(:sparkles:|:star:|feat:|feature)" > /dev/null; then
+            # Minor version bump
+            MINOR=$((MINOR + 1))
+            PATCH=0
+            BUMP_TYPE="minor"
+          elif echo "$COMMIT_MSG" | grep -E "(:bug:|:wrench:|fix:|:pencil:|docs)" > /dev/null; then
+            # Patch version bump
+            PATCH=$((PATCH + 1))
+            BUMP_TYPE="patch"
+          else
+            # Default to patch for any other changes
+            PATCH=$((PATCH + 1))
+            BUMP_TYPE="patch"
+          fi
+
+          NEW_TAG="v${MAJOR}.${MINOR}.${PATCH}"
+          echo "Bump type: $BUMP_TYPE"
           echo "New tag: $NEW_TAG"
           echo "tag=$NEW_TAG" >> $GITHUB_OUTPUT
 
