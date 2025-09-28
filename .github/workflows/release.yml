@@ -1,0 +1,72 @@
+name: Compile LaTeX and Create Release
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - '**.tex'
+      - '**/cv/**'
+      - '**/resume/**'
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: Elie-BRUNO-ATS.tex
+
+      - name: Get current date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
+      - name: Generate version tag
+        id: version
+        run: |
+          # Get the latest tag, if any
+          LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
+          echo "Latest tag: $LATEST_TAG"
+
+          # Extract version number and increment
+          VERSION_NUMBER=$(echo $LATEST_TAG | sed 's/v//' | awk -F. '{print $1"."$2"."$3+1}')
+          NEW_TAG="v$VERSION_NUMBER"
+
+          echo "New tag: $NEW_TAG"
+          echo "tag=$NEW_TAG" >> $GITHUB_OUTPUT
+
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          release_name: CV Release ${{ steps.version.outputs.tag }} - ${{ steps.date.outputs.date }}
+          body: |
+            ## CV Update - ${{ steps.date.outputs.date }}
+
+            This release contains the latest version of the CV/Resume.
+
+            ### Changes
+            - CV updated on ${{ steps.date.outputs.date }}
+
+            ### Files
+            The following CV files are included in this release:
+          draft: false
+          prerelease: false
+
+      - name: Upload compiled PDF to release
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./Elie-BRUNO-ATS.pdf
+          asset_name: Elie-BRUNO-Resume-${{ steps.version.outputs.tag }}.pdf
+          asset_content_type: application/pdf
