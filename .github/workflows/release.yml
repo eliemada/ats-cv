@@ -8,6 +8,9 @@ on:
       - '**/cv/**'
       - '**/resume/**'
 
+permissions:
+  contents: write
+
 jobs:
   create-release:
     runs-on: ubuntu-latest
@@ -41,32 +44,19 @@ jobs:
           echo "New tag: $NEW_TAG"
           echo "tag=$NEW_TAG" >> $GITHUB_OUTPUT
 
-      - name: Create Release
-        uses: actions/create-release@v1
+      - name: Create Release with PDF
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ steps.version.outputs.tag }}
-          release_name: CV Release ${{ steps.version.outputs.tag }} - ${{ steps.date.outputs.date }}
-          body: |
-            ## CV Update - ${{ steps.date.outputs.date }}
+        run: |
+          gh release create ${{ steps.version.outputs.tag }} \
+            ./Elie-BRUNO-ATS.pdf \
+            --title "CV Release ${{ steps.version.outputs.tag }} - ${{ steps.date.outputs.date }}" \
+            --notes "## CV Update - ${{ steps.date.outputs.date }}
 
-            This release contains the latest version of the CV/Resume.
+          This release contains the latest version of the CV/Resume.
 
-            ### Changes
-            - CV updated on ${{ steps.date.outputs.date }}
+          ### Changes
+          - CV updated on ${{ steps.date.outputs.date }}
 
-            ### Files
-            The following CV files are included in this release:
-          draft: false
-          prerelease: false
-
-      - name: Upload compiled PDF to release
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./Elie-BRUNO-ATS.pdf
-          asset_name: Elie-BRUNO-Resume-${{ steps.version.outputs.tag }}.pdf
-          asset_content_type: application/pdf
+          ### Files
+          - Elie-BRUNO-Resume-${{ steps.version.outputs.tag }}.pdf"
