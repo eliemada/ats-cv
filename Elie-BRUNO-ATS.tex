@@ -146,19 +146,17 @@
 
 \fontfamily{cmr}\selectfont
 %----------HEADING-----------------
-
 {
-  \begin{tabularx}{\linewidth}{L r} \\
-    \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize
-    \faPhone}\ \phone}\\
-    & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize
-    \faEnvelope}\ {\emaila}} \\
+  \begin{tabularx}{\linewidth}{L r}
+    \textbf{\Large \name} &
+    \raisebox{0.0\height}{\faPhone} \href{tel:+41781234567}{+41 78 123 45 67} \\
+    & \raisebox{0.0\height}{\faEnvelope} \href{mailto:\emaila}{\emaila} \\
     Bachelor of Computer Science &
-    \href{https://github.com/eliemada}{\raisebox{0.0\height}{\footnotesize
-    \faGithub}\ {eliemada}} \\
+    \raisebox{0.0\height}{\faGithub}
+    \href{https://github.com/eliemada}{github.com/eliemada} \\
     {Swiss Federal Institute of Technology (EPFL), Lausanne} &
-    \href{www.linkedin.com/in/elie-bruno/}{\raisebox{0.0\height}{\footnotesize
-    \faLinkedin}\ {elie-bruno}}
+    \raisebox{0.0\height}{\faLinkedin}
+    \href{https://www.linkedin.com/in/elie-bruno}{linkedin.com/in/elie-bruno}
   \end{tabularx}
 }
 
@@ -168,23 +166,24 @@
 \vspace{-2.0mm}
 \resumeSubheading
 {Quantitative Analyst Intern}{}
-{Qube Research \& Technologies (QRT)}{Feb 2025 – Aug 2025}
+{Qube Research \& Technologies (QRT)}{Feb 2025 - Aug 2025}
 \vspace{-2mm}
 \resumeItemListStart
 \item Developed \textbf{scalable data pipelines} to process financial
 datasets (e.g., Markit, Euronext), enabling real-time quantitative research.
 \item Built a migration framework to transition legacy data sources
-to a modern, \textbf{Argo Workflows-based} architecture using cron
-jobs and S3 trigger events for automated ETL of CSV/PSV/TSV files,
-API queries, and database dumps.
+to a modern, \textbf{Argo Workflows-based} architecture, using cron
+jobs and S3 trigger events to automate ETL processes for CSV, PSV,
+TSV files, API queries, and database dumps.
 \item Designed internal APIs and runbook automation tools to
 \textbf{streamline workflows} for researchers and data engineers.
 \item Leveraged \textbf{Python, PyArrow, Polars, and Parquet} for
 in-memory analytics; executed advanced SQL on \textbf{PostgreSQL} and
 columnar stores for high-throughput queries.
-\item Ensured high code quality and consistency using Pants for
-builds, `uv` for dependency management, Ruff for linting, and `ty`
-(\textbf{Astral}) for type-safe CLI interfaces.
+\item Independently learned and integrated emerging tools such as
+Pants (build system), uv (dependency management), Ruff (linting), and
+Ty from Astral (type-safe CLI interfaces)(\textbf{Astral}) for
+type-safe CLI interfaces.
 \item Monitored and debugged data workflows using \textbf{AWS
 CloudWatch} and logging best practices.
 \resumeItemListEnd
@@ -192,7 +191,7 @@ CloudWatch} and logging best practices.
 
 \resumeSubheading
 {Associate Backend Engineer}{}
-{Proton}{Aug 2024 – Nov 2024}
+{Proton}{Aug 2024 - Nov 2024}
 \vspace{-2mm}
 \resumeItemListStart
 \item Refactored legacy monolith codebase into modular components to
@@ -204,14 +203,14 @@ added comprehensive tests to ensure robustness.
 \vspace{-3.0mm}
 \resumeSubheading
 {Teaching Assistant}{}
-{EPFL - CS-119(a) and CSS-119(k)}{Feb 2024 - Ongoing}
+{EPFL}{Feb 2024 - Ongoing}
 \vspace{-2.0mm}
-
 \resumeItemListStart
-\item Taught fundamentals of C and Python; guided students through
-exercises and assignments.
-\item Built a notification bot to track and push EDStem student
-questions in real time.
+\item Instructed and mentored 300+ first-year students in C and
+Python, reinforcing programming fundamentals through exercises, labs,
+and assignments.
+\item Built and deployed a real-time EDStem notification bot,
+reducing student response latency by 40\% and improving engagement.
 \resumeItemListEnd
 
 \vspace{-2.0mm}
@@ -238,14 +237,30 @@ questions in real time.
 \section{\textbf{Education}}
 \resumeSubHeadingListStart
 \resumeSubheading
+{Portfolio Management Program (PMP) — Quantitative Finance
+Track}{2025 - Ongoing}
+{University of Zurich (UZH) \& Department of Finance}{}
+\vspace{-2mm}
+\resumeItemListStart
+\item{Highly selective two-year program run alongside EPFL Master's
+studies, co-managed with industry sponsors.}
+\item{Managed a live investment portfolio implementing quantitative,
+ML-driven trading strategies.}
+\item{Curriculum includes portfolio theory, advanced investments,
+Python implementation, and execution of strategies.}
+\item{Develop skills in backtesting, risk analytics, execution
+strategies, and performance attribution.}
+\resumeItemListEnd
+\vspace{-3.0mm}
+\resumeSubheading
 {Master of Computer Science}{}
-{Swiss Federal Institute of Technology (EPFL), Lausanne}{2025-2027}
+{Swiss Federal Institute of Technology (EPFL), Lausanne}{2025 - Ongoing}
 \resumeSubheading
 {Master Computer Science and Engineering}{}
-{Instituto Superior Técnico (IST), Lisbon}{2024-2025}
+{Instituto Superior Técnico (IST), Lisbon}{2024 - 2025}
 \resumeSubheading
 {Bachelor of Computer Science}{}
-{Swiss Federal Institute of Technology (EPFL), Lausanne}{2022-2025}
+{Swiss Federal Institute of Technology (EPFL), Lausanne}{2022 - 2025}
 
 \resumeSubHeadingListEnd
 \vspace{-5.5mm}
@@ -281,9 +296,8 @@ questions in real time.
 \item {Developed dynamic Flight Tracker Java application enabling
   \textbf{real-time flight tracking} worldwide with up-to-date
 information on status, delays, and cancellations.}
-\item {Demonstrated proficiency in Object-Oriented Programming,
-  utilizing Java concepts like \textbf{inheritance and encapsulation},
-while adhering to the principles of Object-Oriented Programming.}
+\item  Demonstrated proficiency in \textbf{Object-Oriented
+Programming} using Java concepts like inheritance and encapsulation.
 \resumeItemListEnd
 \vspace{-2mm}
 
@@ -322,53 +336,58 @@ while adhering to the principles of Object-Oriented Programming.}
 \begin{itemize}[leftmargin=0.05in, label={}]
     \small{
     \item{
-        \textbf{Languages}{: Python,C, Java, Javascript, HTML+CSS,
-        Assembly, TypeScript, SQL  } \\
-        \textbf{Libraries }{: PyArrow, Polars, Pandas, Astral Suite, ReactJs }\\
-        \textbf{Web Dev Tools}{: Jetbrains Suite, VScode, Git, Github } \\
-        \textbf{Frameworks}{: ReactJs } \\
-        %  \textbf{Cloud/Databases}{:MongoDb, Firebase, Relational
-        % Database(mySql) } \\
-
-        \textbf{Relevent Coursework}{: Data Structures \& Algorithms,
-          Operating Systems, Object Oriented Programming, Software
-        Engineering, Computer Networks, Machine Learning } \\
-        \textbf{Areas of Interest}{: Big Data, Data Science, Machine
-        Learning, Low-level Programming} \\
-        \textbf{Soft Skills}{: Problem Solving, Self-learning,
-        Presentation, Adaptability, Team Leading} \\
-    }}
+        \textbf{Programming Languages}{: Python, C, Java, TypeScript,
+        SQL, JavaScript, HTML/CSS} \\
+        \textbf{Data \& Analytics}{: PyArrow, Polars, Pandas, NumPy,
+        Parquet, Scikit Learn, TensorFlow} \\
+        \textbf{Cloud Platforms}{: AWS (S3, CloudWatch)} \\
+        \textbf{Containerization \& Orchestration}{: Docker,
+        Kubernetes, Argo Workflows} \\
+        \textbf{CI/CD \& DevOps Tools}{: Git, GitHub, Pants, uv,
+        Ruff, CI/CD pipelines} \\
+        \textbf{Frameworks}{: React.js} \\
+        \textbf{Relevant Coursework}{: Data Structures \& Algorithms,
+        Operating Systems, Computer Networks, Machine Learning}
+      }
+    }
 \end{itemize}
-\vspace{-16pt}
+%-----------Soft Skills-----------------
+\section{\textbf{Soft Skills}}
+\begin{itemize}[leftmargin=0.05in, label={}]
+    \small{
+    \item{Communication, Teamwork, Problem-Solving, Leadership, Adaptability}
+    }
+\end{itemize}
+\vspace{-10pt}
 
 %-----------Positions of Responsibility-----------------
 %-----------Interests & Achievements-----------------
-\section{\textbf{Interests \& Achievements}}
-\vspace{-0.4mm}
-\resumeSubHeadingListStart
+% \section{\textbf{Interests \& Achievements}}
+% \vspace{-0.4mm}
+% \resumeSubHeadingListStart
 
-\resumePOR{Hackathons}
-{Optiver, Vitol, Lauzhack ... – Lausanne}
-{}
-\resumeItemListStart
-\item Finished 3rd out of 90 in Optiver EPFL Hackathon 2023,
-developing a model to analyze and predict stock market trends for Tesla.
-\item Won Entrepreneur First hackathon in Milan where we developped a
-AI agent to make bookings and reservations.
-\resumeItemListEnd
-\vspace{-4mm}
-\resumePOR{Photography Awards}
-{}{}
-\resumeItemListStart
-\item \textbf{Winner} of RESCO 2023 EPFL photo contest.
-\item \textbf{Winner} of the EPFL Study Abroad 2025 photo contest
-(Landscape category).
-\item Portfolio available at:
-\href{https://photos.eliebruno.com}{\texttt{photos.eliebruno.com}}.
-\resumeItemListEnd
+% \resumePOR{Hackathons}
+% {Optiver, Vitol, Lauzhack ... - Lausanne}
+% {}
+% \resumeItemListStart
+% \item Finished 3rd out of 90 in Optiver EPFL Hackathon 2023,
+% developing a model to analyze and predict stock market trends for Tesla.
+% \item Won Entrepreneur First hackathon in Milan where we developed a
+% AI agent to make bookings and reservations.
+% \resumeItemListEnd
+% \vspace{-4mm}
+% \resumePOR{Photography Awards}
+% {}{}
+% \resumeItemListStart
+% \item \textbf{Winner} of RESCO 2023 EPFL photo contest.
+% \item \textbf{Winner} of the EPFL Study Abroad 2025 photo contest
+% (Landscape category).
+% \item Portfolio available at:
+% \href{https://photos.eliebruno.com}{\texttt{photos.eliebruno.com}}.
+% \resumeItemListEnd
 
-\resumeSubHeadingListEnd
-\vspace{-5mm}
+% \resumeSubHeadingListEnd
+% \vspace{-5mm}
 
 % %-----------Achievements-----------------
 % \section{\textbf{Achievements}}
