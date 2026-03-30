@@ -151,7 +151,7 @@
     \textbf{\Large \name} &
     \raisebox{0.0\height}{\faPhone} \href{tel:+41781234567}{+41 76 744 72 88} \\
     & \raisebox{0.0\height}{\faEnvelope} \href{mailto:\emaila}{\emaila} \\
-    Bachelor of Computer Science &
+    Master of Computer Science &
     \raisebox{0.0\height}{\faGithub}
     \href{https://github.com/eliemada}{github.com/eliemada} \\
     {Swiss Federal Institute of Technology (EPFL), Lausanne} &
@@ -176,19 +176,14 @@
 \resumeItemListStart
 \item Developed \textbf{scalable data pipelines} to process financial
 datasets (e.g., Markit, Euronext), enabling real-time quantitative research.
-\item Built a migration framework to transition legacy data sources
-to a modern, \textbf{Argo Workflows-based} architecture, using cron
-jobs and S3 trigger events to automate ETL processes for CSV, PSV,
-TSV files, API queries, and database dumps.
-\item Designed internal APIs and runbook automation tools to
-\textbf{streamline workflows} for researchers and data engineers.
-\item Leveraged \textbf{Python, PyArrow, Polars, and Parquet} for
-in-memory analytics; executed advanced SQL on \textbf{PostgreSQL} and
-columnar stores for high-throughput queries.
-\item Independently learned and integrated emerging tools such as
-Pants (build system), uv (dependency management), Ruff (linting), and
-Ty from Astral (type-safe CLI interfaces)(\textbf{Astral}) for
-type-safe CLI interfaces.
+\item Built a migration framework to transition \textbf{legacy data
+sources} to a modern, Argo Workflows-based architecture, automating
+ETL processes for CSV, PSV, TSV files, API queries, and database dumps.
+\item Designed \textbf{internal APIs} and runbook automation tools to
+streamline workflows for researchers and data engineers.
+\item Executed \textbf{advanced SQL} on PostgreSQL and columnar stores
+for high-throughput queries; leveraged Python, PyArrow, Polars, and
+Parquet for in-memory analytics.
 \item Monitored and debugged data workflows using \textbf{AWS
 CloudWatch} and logging best practices.
 \resumeItemListEnd
@@ -199,10 +194,11 @@ CloudWatch} and logging best practices.
 {Proton}{Aug 2024 - Nov 2024}
 \vspace{-2mm}
 \resumeItemListStart
-\item Refactored legacy monolith codebase into modular components to
-\textbf{enhance maintainability and scalability}.
+\item \textbf{Modernized a legacy monolith} by refactoring the
+codebase into modular components, enhancing maintainability and
+scalability of the web application.
 \item Improved system architecture through file reorganization and
-added comprehensive tests to ensure robustness.
+added comprehensive \textbf{integration tests} to ensure robustness.
 \resumeItemListEnd
 
 \vspace{-3.0mm}
@@ -214,25 +210,11 @@ added comprehensive tests to ensure robustness.
 \item Instructed and mentored 300+ first-year students in C and
 Python, reinforcing programming fundamentals through exercises, labs,
 and assignments.
-\item Built and deployed a real-time EDStem notification bot,
+\item Built and deployed a \textbf{real-time notification web bot},
 reducing student response latency by 40\% and improving engagement.
 \resumeItemListEnd
 
 \vspace{-2.0mm}
-
-% \resumeSubheading
-%   {EPFL Hackathon -- Tesla Stock Volatility Prediction}{}
-%   {Optiver}{December 2023}
-%   \vspace{-2.0mm}
-%   \resumeItemListStart
-%   \item Developed a model to analyze and predict stock market
-% trends, specifically for Tesla.
-%   \item Collaborated in a team environment to combine diverse
-% skills in data analysis, programming, and financial knowledge.
-%   \item Placed 7th out of 90, demonstrating strong analytical and
-% predictive abilities in a competitive setting.
-% \resumeItemListEnd
-
 \vspace{-3.0mm}
 
 \resumeSubHeadingListEnd
@@ -241,20 +223,6 @@ reducing student response latency by 40\% and improving engagement.
 %-----------EDUCATION-----------
 \section{\textbf{Education}}
 \resumeSubHeadingListStart
-\resumeSubheading
-{Portfolio Management Program (PMP) — Quantitative Finance
-Track}{Sep 2025 - Ongoing}
-{University of Zurich (UZH) \& Department of Finance}{}
-\vspace{-2mm}
-\resumeItemListStart
-\item{Selective two-year program co-managed with industry sponsors.
-  Managed a \textbf{live investment portfolio} implementing quantitative,
-ML-driven systematic trading strategies.}
-\item{Curriculum: portfolio theory, risk analytics,
-  \textbf{backtesting}, execution strategies, and
-\textbf{performance attribution}.}
-\resumeItemListEnd
-\vspace{-3.0mm}
 \resumeSubheading
 {Master of Computer Science}{}
 {Swiss Federal Institute of Technology (EPFL), Lausanne}{2025 - Ongoing}
@@ -273,17 +241,35 @@ ML-driven systematic trading strategies.}
 \section{\textbf{Personal Projects}}
 \resumeSubHeadingListStart
 \resumeProject
-{Plane Tracker - ADSB Demodulator / JavaFX} %Project Name
-{A Plane Tracker application similar to FlightRadar24} %Project Name,
-% Location Name
-{14 weeks} %Event Dates
+{PolicyRAG -- Full-Stack Web Application} %Project Name
+{Evidence-based policy support system with web interface and search
+engine} %Description
+{EPFL} %Location
+{}
 
 \resumeItemListStart
-\item {Developed dynamic Flight Tracker Java application enabling
-  \textbf{real-time flight tracking} worldwide with up-to-date
-information on status, delays, and cancellations.}
-\item  Demonstrated proficiency in \textbf{Object-Oriented
-Programming} using Java concepts like inheritance and encapsulation.
+\item {Built a \textbf{full-stack web application} (Next.js + FastAPI)
+  enabling policymakers to query 5,000+ academic papers via a
+\textbf{REST API} backed by FAISS vector database indexing 250k+ chunks.}
+\item {Managed \textbf{data storage} on AWS S3 with structured metadata,
+  automated ETL pipelines, and deployed with \textbf{Docker Compose}
+and CI/CD via GitHub Actions.}
+\resumeItemListEnd
+\vspace{-2mm}
+
+\resumeProject
+{Agentic Admission -- Data Processing Pipeline} %Project Name
+{Admission support system with database management for EPFL} %Description
+{EPFL} %Location
+{}
+
+\resumeItemListStart
+\item {Built a \textbf{data pipeline} normalizing 1,342 records from
+  13 heterogeneous Excel files into a unified Parquet database with
+\textbf{SQL-style transformations} and schema validation.}
+\item {Developed a PII anonymization module with \textbf{multilingual
+  NER} for privacy-compliant data handling in a sensitive institutional
+context.}
 \resumeItemListEnd
 \vspace{-2mm}
 
@@ -295,18 +281,18 @@ Programming} using Java concepts like inheritance and encapsulation.
 \begin{itemize}[leftmargin=0.05in, label={}]
     \small{
     \item{
-        \textbf{Programming Languages}{: Python, C, Java, TypeScript,
-        SQL, JavaScript, HTML/CSS} \\
-        \textbf{Data \& Analytics}{: PyArrow, Polars, Pandas, NumPy,
-        Parquet, Scikit Learn, TensorFlow} \\
-        \textbf{Cloud Platforms}{: AWS (S3, CloudWatch)} \\
-        \textbf{Containerization \& Orchestration}{: Docker,
-        Kubernetes, Argo Workflows} \\
-        \textbf{CI/CD \& DevOps Tools}{: Git, GitHub, Pants, uv,
-        Ruff, CI/CD pipelines} \\
-        \textbf{Frameworks}{: React.js} \\
+        \textbf{Programming Languages}{: Python, SQL, TypeScript,
+        JavaScript, HTML/CSS, C, Java} \\
+        \textbf{Web Frameworks}{: FastAPI, Next.js, React.js} \\
+        \textbf{Databases}{: PostgreSQL, FAISS, Parquet/PyArrow,
+        S3 data stores} \\
+        \textbf{Data \& Analytics}{: Polars, Pandas, NumPy, Pydantic,
+        Scikit Learn} \\
+        \textbf{Containerization \& DevOps}{: Docker, Kubernetes,
+        Git, GitHub Actions, CI/CD pipelines} \\
         \textbf{Relevant Coursework}{: Data Structures \& Algorithms,
-        Operating Systems, Computer Networks, Machine Learning}
+          Operating Systems, Computer Networks, Databases, Machine
+        Learning}
       }
     }
 \end{itemize}
@@ -318,49 +304,6 @@ Programming} using Java concepts like inheritance and encapsulation.
     }
 \end{itemize}
 \vspace{-10pt}
-
-%-----------Positions of Responsibility-----------------
-%-----------Interests & Achievements-----------------
-% \section{\textbf{Interests \& Achievements}}
-% \vspace{-0.4mm}
-% \resumeSubHeadingListStart
-
-% \resumePOR{Hackathons}
-% {Optiver, Vitol, Lauzhack ... - Lausanne}
-% {}
-% \resumeItemListStart
-% \item Finished 3rd out of 90 in Optiver EPFL Hackathon 2023,
-% developing a model to analyze and predict stock market trends for Tesla.
-% \item Won Entrepreneur First hackathon in Milan where we developed a
-% AI agent to make bookings and reservations.
-% \resumeItemListEnd
-% \vspace{-4mm}
-% \resumePOR{Photography Awards}
-% {}{}
-% \resumeItemListStart
-% \item \textbf{Winner} of RESCO 2023 EPFL photo contest.
-% \item \textbf{Winner} of the EPFL Study Abroad 2025 photo contest
-% (Landscape category).
-% \item Portfolio available at:
-% \href{https://photos.eliebruno.com}{\texttt{photos.eliebruno.com}}.
-% \resumeItemListEnd
-
-% \resumeSubHeadingListEnd
-% \vspace{-5mm}
-
-% %-----------Achievements-----------------
-% \section{\textbf{Achievements}}
-% \vspace{-0.4mm}
-% \resumeSubHeadingListStart
-% \resumePOR{Achievement } % Award
-%     {description} % Event
-%     {Event dates} %Event Year
-
-% \resumePOR{Achievement } % Award
-%     {description} % Event
-%     {Event dates} %Event Year
-% \resumeSubHeadingListEnd
-% \vspace{-5mm}
 
 %-------------------------------------------
 \end{document}

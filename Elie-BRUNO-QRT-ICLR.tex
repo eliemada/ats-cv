@@ -1,0 +1,309 @@
+%-------------------------
+% Resume in Latex — QRT ICLR 2026 Travel Grant
+% Tailored for ML/AI research audience
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.6cm, right=1.2cm, bottom=0.6cm}
+\usepackage[most]{tcolorbox}
+\tcbset{
+  frame code={}
+  center title,
+  left=0pt,
+  right=0pt,
+  top=0pt,
+  bottom=0pt,
+  colback=gray!20,
+  colframe=white,
+  width=\dimexpr\textwidth\relax,
+  enlarge left by=-2mm,
+  boxsep=4pt,
+  arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+\item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+  \vspace{0.5mm}
+\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}}
+  \end{tabular*}
+  \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{0.5mm}
+\item
+  \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\footnotesize{#4}} \\
+    \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+  \end{tabular*}
+  \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+  \vspace{0.5mm}
+\item
+  \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\footnotesize{#3}} \\
+    \footnotesize{\textit{#2}} & \footnotesize{#4}
+  \end{tabular*}
+  \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{
+\begin{itemize}[leftmargin=*,labelsep=0mm]}
+    \newcommand{\resumeHeadingSkillStart}{
+    \begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+        \newcommand{\resumeItemListStart}{
+          \begin{justify}
+            \begin{itemize}[leftmargin=3ex, rightmargin=2ex,
+              noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+              \newcommand{\resumeSubHeadingListEnd}{
+          \end{itemize}\vspace{2mm}}
+          \newcommand{\resumeHeadingSkillEnd}{
+      \end{itemize}\vspace{-2mm}}
+      \newcommand{\resumeItemListEnd}{
+    \end{itemize}
+\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+  \vspace{2mm}
+  \begin{tcolorbox}
+    \textbf{\large #1}
+  \end{tcolorbox}
+  \vspace{-4mm}
+}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Elie BRUNO} % Your Name
+\newcommand{\course}{Computer Science} % Your Program
+\newcommand{\roll}{xxxxxxx} % Your Roll No.
+\newcommand{\phone}{+41767447288} % Your Phone Number
+\newcommand{\emaila}{elie.bruno@epfl.ch} %Email 1
+
+\begin{document}
+
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+{
+  \begin{tabularx}{\linewidth}{L r}
+    \textbf{\Large \name} &
+    \raisebox{0.0\height}{\faPhone} \href{tel:+41767447288}{+41 76 744 72 88} \\
+    & \raisebox{0.0\height}{\faEnvelope} \href{mailto:\emaila}{\emaila} \\
+    Master of Computer Science &
+    \raisebox{0.0\height}{\faGithub}
+    \href{https://github.com/eliemada}{github.com/eliemada} \\
+    {Swiss Federal Institute of Technology (EPFL), Lausanne} &
+    \raisebox{0.0\height}{\faLinkedin}
+    \href{https://www.linkedin.com/in/elie-bruno}{linkedin.com/in/elie-bruno}
+  \end{tabularx}
+}
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Master of Computer Science}{}
+{Swiss Federal Institute of Technology (EPFL), Lausanne}{2025 - Ongoing}
+\vspace{-2mm}
+\resumeItemListStart
+\item{Coursework: \textbf{Machine Learning}, \textbf{ML in Finance},
+\textbf{ML in Econometrics}, \textbf{Modern Natural Language Processing}.}
+\resumeItemListEnd
+\vspace{-3.0mm}
+\resumeSubheading
+{Portfolio Management Program (PMP) — Quantitative Finance
+Track}{Sep 2025 - Feb 2026}
+{University of Zurich (UZH) \& Department of Finance}{}
+\vspace{-2mm}
+\resumeItemListStart
+\item{Selective two-year program. Managed a live portfolio implementing
+quantitative, ML-driven trading strategies.}
+\resumeItemListEnd
+\vspace{-3.0mm}
+\resumeSubheading
+{Master Computer Science and Engineering}{}
+{Instituto Superior Técnico (IST), Lisbon}{2024 - 2025}
+\resumeSubheading
+{Bachelor of Computer Science}{}
+{Swiss Federal Institute of Technology (EPFL), Lausanne}{2022 - 2025}
+
+\resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+%-----------ML/AI PROJECTS-----------------
+\section{\textbf{ML \& AI Research Projects}}
+\resumeSubHeadingListStart
+
+\resumeProject
+{PolicyRAG -- Evidence-Based Policy Support via RAG}
+{End-to-end Retrieval-Augmented Generation system for policy research}
+{2025 - Ongoing}
+{\href{https://ml-poc.eliebruno.com}{\texttt{ml-poc.eliebruno.com}}}
+
+\resumeItemListStart
+\item {Built a full RAG pipeline ingesting \textbf{4,920 research
+  papers} from OpenAlex with multimodal PDF parsing using
+\textbf{ByteDance Dolphin 1.5} vision-language model on GPU.}
+\item {Designed a \textbf{hybrid semantic chunking} strategy with
+  benchmarking framework evaluating 5+ metrics (semantic coherence,
+boundary quality, citation integrity) across competing approaches.}
+\item {Implemented \textbf{two-stage retrieval}: FAISS dense vector
+  search (OpenAI embeddings, 250k+ chunks) followed by learned
+reranking (ZeroEntropy) for precision.}
+\item {Deployed \textbf{distributed GPU processing} on 5x AWS EC2 Spot
+  instances (NVIDIA T4), processing 4,000 PDFs for \$26.
+  Served via FastAPI + Next.js with 9 LLM models via OpenRouter.
+Led to discussions with industry professionals.}
+\resumeItemListEnd
+\vspace{-2mm}
+
+\resumeProject
+{Agentic Admission -- Multi-Agent LLM Decision Support}
+{Agentic AI system for EPFL Master's admission evaluation}
+{2025 - Ongoing}
+{}
+
+\resumeItemListStart
+\item {Designed a \textbf{multi-agent LLM system} to evaluate 1,342
+  candidate applications across 6 years of historical admission data
+at EPFL.}
+\item {Deployed \textbf{Llama-3.1-8B-Instruct} locally on EPFL's
+  SCITAS HPC cluster (Izar) for privacy-preserving inference on
+sensitive PII data — no external API dependencies.}
+\item {Built robust \textbf{heterogeneous data extraction pipeline}
+  normalizing 13 schema-varying Excel files into unified Parquet
+  format using pattern-based header matching and intelligent row
+grouping.}
+\item {Implementing \textbf{RAG with institutional guidelines} as
+  context to ensure LLM recommendations align with country-specific
+GPA thresholds and admission policies.}
+\resumeItemListEnd
+\vspace{-2mm}
+
+\resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+\resumeSubHeadingListStart
+\vspace{-2.0mm}
+\resumeSubheading
+{Software Engineer Intern}{}
+{Citadel}{Summer 2026}
+\vspace{-2mm}
+
+\resumeSubheading
+{Quantitative Analyst Intern}{}
+{Qube Research \& Technologies (QRT)}{Feb 2025 - Aug 2025}
+\vspace{-2mm}
+\resumeItemListStart
+\item Developed \textbf{scalable data pipelines} for financial datasets
+(Markit, Euronext); built migration framework to \textbf{Argo
+Workflows-based} architecture with automated ETL.
+\item Leveraged \textbf{Python, PyArrow, Polars, Parquet} for
+in-memory analytics and \textbf{PostgreSQL} for high-throughput queries.
+\resumeItemListEnd
+\vspace{-3.0mm}
+
+\resumeSubheading
+{Teaching Assistant -- C and Python}{}
+{EPFL}{Feb 2024 - Ongoing}
+\vspace{-2.0mm}
+
+\resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills}}
+\begin{itemize}[leftmargin=0.05in, label={}]
+    \small{
+    \item{
+        \textbf{Programming Languages}{: Python, C, Java, TypeScript,
+        SQL, JavaScript} \\
+        \textbf{ML \& NLP}{: PyTorch, Scikit-Learn, TensorFlow, FAISS,
+          HuggingFace Transformers, LLMs (Llama, GPT, Claude),
+        RAG, Embeddings} \\
+        \textbf{Data \& Analytics}{: PyArrow, Polars, Pandas, NumPy,
+        Parquet, OpenAI API, LiteLLM} \\
+        \textbf{Cloud \& Infrastructure}{: AWS (S3, EC2, CloudWatch),
+        Docker, Kubernetes, Argo Workflows, HPC (SCITAS), Git, CI/CD}
+      }
+    }
+\end{itemize}
+\vspace{-10pt}
+
+%-----------Achievements-----------------
+\section{\textbf{Achievements}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumePOR{Hackathons}
+{-- Optiver, Vitol, Lauzhack - Lausanne}
+{}
+\resumeItemListStart
+\item Finished \textbf{3rd out of 90} in Optiver EPFL Hackathon 2023,
+developing a model to analyze and predict stock market trends for Tesla.
+\item \textbf{Won} Entrepreneur First hackathon in Milan where we developed an
+AI agent to make bookings and reservations.
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+%-------------------------------------------
+\end{document}
